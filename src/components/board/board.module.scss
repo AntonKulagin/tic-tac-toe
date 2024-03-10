@@ -1,0 +1,21 @@
+.board {
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.boardList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 0 20px rgba(81, 90, 255, 0.6);
+  transition: boxShadow 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 0 5px rgba(81, 90, 255, 1), 0 0 50px rgba(81, 90, 255, 0.6);
+    }
+  }
+}
+
+.winner {
+  color: greenyellow;
+}
