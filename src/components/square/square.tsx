@@ -1,8 +1,9 @@
 import { FC } from 'react'
 import cls from './square.module.scss'
+import { TSquare } from '../../types'
 
 interface SquareProps {
-  value: number
+  value: TSquare
   onSquareClick: () => void
 }
 

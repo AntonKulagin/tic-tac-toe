@@ -1,4 +1,6 @@
-export function calculateWinner(squares: string[]) {
+import { TSquare } from '../types'
+
+export function calculateWinner(squares: TSquare[]) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
