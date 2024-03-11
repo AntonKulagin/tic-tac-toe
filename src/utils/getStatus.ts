@@ -1,16 +1,19 @@
+import { TSquare } from '../types'
+
 export function getStatus(
-  squares: string[],
+  squares: TSquare[],
   winner: string | null,
-  isGameOver: boolean,
-  isNextX: boolean
+  isGameOver: boolean
 ) {
+  const isX = squares.filter(Boolean).length % 2 === 0
+
   if (winner) {
     return 'Winner: ' + winner
   } else if (isGameOver) {
     return 'Nobody won'
   } else if (!squares.filter(Boolean).length) {
-    return 'Start player: ' + (isNextX ? 'X' : 'O')
+    return 'Start player: ' + (isX ? 'X' : 'O')
   } else {
-    return 'Next player: ' + (isNextX ? 'X' : 'O')
+    return 'Next player: ' + (isX ? 'X' : 'O')
   }
 }
